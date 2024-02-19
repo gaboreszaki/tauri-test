@@ -1,0 +1,77 @@
+
+.floating-title {
+  position: absolute;
+  display: block;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(45deg, rgba(9, 9, 9, 0.9) 0%, rgba(9, 9, 9, 0.8) 35%, rgba(9, 9, 9, 0.1) 100%);
+  top: 60%;
+
+  padding: 10px 15px 10px 10px;
+  border-radius: 0 0 10px 0;
+
+  h5 {
+    margin-left: 0
+  }
+}
+
+
+/// Secondary SITE-NAV
+.nav-item:last-child a.nav-link {
+  padding-right: 0
+}
+
+/// Main menu
+.main-menu {
+  .item {
+    img {
+      width: 100%;
+      display: inline;
+
+      filter: grayscale(0%);
+
+    }
+
+    .label {
+      background: rgba($black, 0.6);
+      padding: 5px 10px 5px 15px;
+      font-size: 1.2rem;
+      font-variant: all-small-caps;
+      position: relative;
+      top: 100%;
+      margin-top: -41px;
+    }
+
+    &:hover {
+
+      img {
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+
+        animation-duration: 0.5s;
+        filter: grayscale(100%);
+      }
+
+      .label {
+        padding: 5px 10px;
+        border-left: $white solid 5px;
+        color: $white;
+        background: rgba($primary, 0.6);
+      }
+    }
+  }
+}
+
+
+/// overwrite carousel buttons position
+.carousel-control-prev, .carousel-control-next {
+  width: 7% !important;
+}
+
+
+/// Overwrite Small
+small {
+  font-size: $font-size-base * 0.8;
+}
+
+.text-discord {
+  color: $discord !important;
+}
